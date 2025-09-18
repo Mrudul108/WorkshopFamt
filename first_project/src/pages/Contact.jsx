@@ -55,14 +55,14 @@ const Contact = () => {
       <div className="container">
         <div className="row align-items-center justify-content-center">
           {/* Left Side Image */}
-          <div className="col-lg-6 d-none d-lg-block text-center mb-4 mb-lg-0">
+          <div className="col-lg-6 d-none d-lg-block text-center ">
             {!loaded && (
               <h2 className="text-center">Loading image... Please wait.</h2>
             )}
             <img
               src="/imgs/contact.jpg"
               alt="contact"
-              className="img-fluid rounded-4 shadow"
+              className="img-fluid rounded-4 "
               style={{ display: loaded ? "block" : "none" }}
               onLoad={() => setLoaded(true)}
             />
@@ -70,7 +70,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="col-lg-6 col-md-12">
-            <div className="card rounded-4 border-0 p-4">
+            <div className="card rounded-4 border-0 p-4 input-form">
               <h2 className="text-center mb-4 fw-bold text-info">
                 Get in Touch
               </h2>

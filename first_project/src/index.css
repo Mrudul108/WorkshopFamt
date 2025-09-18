@@ -1,3 +1,7 @@
+:root {
+  --bg-col: white
+}
+
 .pnf {
     min-height: 50vh;
     display: flex;
@@ -64,11 +68,15 @@ body, html, #root {
   margin: 0;
   font-family: 'Arial', sans-serif;
   /* background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); */
-  background-color: wheat;
+  background-color: var(--bg-col);
   background-attachment: fixed;
-  color: #black;
+  color: black;
 }
 
 .container-fluid {
   background: transparent; /* Keep content background transparent */
+}
+
+.input-form {
+  background-color: var(--bg-col);
 }

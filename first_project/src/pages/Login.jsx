@@ -61,7 +61,7 @@ function Login() {
             <img
               src="/imgs/login.jpg"
               alt="login"
-              className="img-fluid rounded-4 shadow"
+              className="img-fluid rounded-4"
               style={{ display: loaded ? "block" : "none" }}
               onLoad={() => setLoaded(true)}
             />
@@ -69,7 +69,7 @@ function Login() {
 
           {/* Login Form */}
           <div className="col-lg-6 col-sm-12">
-            <div className="card rounded-4 border-0 p-4">
+            <div className="card rounded-4 border-0 p-4 input-form">
               <h2 className="text-center mb-4 fw-bold text-primary">
                 Welcome Back
               </h2>

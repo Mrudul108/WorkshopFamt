@@ -66,14 +66,14 @@ function Register() {
             <img
               src="/imgs/register.jpg"
               alt="register"
-              className="img-fluid rounded-4 shadow"
+              className="img-fluid rounded-4"
               style={{ display: loaded ? "block" : "none" }}
               onLoad={() => setLoaded(true)}
             />
           </div>
 
           <div className="col-lg-6 col-sm-12">
-            <div className="card shadow-lg rounded-4 border-0 p-4">
+            <div className="card rounded-4 border-0 p-4 input-form">
               <h2 className="text-center mb-4 fw-bold text-success">
                 Create Your Account
               </h2>
