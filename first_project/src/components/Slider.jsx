@@ -2,23 +2,26 @@ import { useState } from 'react'
 // import './Slider.css'   // add this css file
 
 function Slider() {
-    const [loaded, setLoaded] = useState(false);
+    const [loaded, setLoaded] = useState({ load1: false, load2: false, load3: false });
     return (
         <div>
-            <div id="carouselExampleControlsNoTouching" className="carousel slide" data-bs-touch="false">
+            {(!loaded.load1 || !loaded.load2 || !loaded.load3) && (
+                <h2 className="text-center align-self-center mt-5">Loading images... Please wait.</h2>
+            )}
+            <div
+                id="carouselExampleControlsNoTouching"
+                className="carousel slide"
+                data-bs-touch="false"
+                style={{ display: loaded.load1 && loaded.load2 && loaded.load3 ? "block" : "none" }}
+            >
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        {!loaded && (
-                            <h2 className="text-center">Loading image... Please wait.</h2>
-                        )}
                         <img
                             src="/imgs/img4.jpg"
                             alt="Slide 1"
                             className="d-block w-100 slider-img"
-                            style={{ maxHeight: "400px", objectFit: "cover", display: loaded ? "block" : "none" }}
-                            onLoad={() => setLoaded(true)}
+                            onLoad={() => setLoaded(prev => ({ ...prev, load1: true }))}
                         />
-                        <img />
                     </div>
                     <div className="carousel-item">
                         {!loaded && (
@@ -28,10 +31,8 @@ function Slider() {
                             src="/imgs/img7.jpg"
                             alt="Slide 2"
                             className="d-block w-100 slider-img"
-                            style={{ maxHeight: "400px", objectFit: "cover", display: loaded ? "block" : "none" }}
-                            onLoad={() => setLoaded(true)}
+                            onLoad={() => setLoaded(prev => ({ ...prev, load2: true }))}
                         />
-                        <img />
                     </div>
                     <div className="carousel-item">
                         {!loaded && (
@@ -41,10 +42,8 @@ function Slider() {
                             src="/imgs/img5.png"
                             alt="Slide 3"
                             className="d-block w-100 slider-img"
-                            style={{ maxHeight: "400px", objectFit: "cover", display: loaded ? "block" : "none" }}
-                            onLoad={() => setLoaded(true)}
+                            onLoad={() => setLoaded(prev => ({ ...prev, load3: true }))}
                         />
-                        <img />
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
