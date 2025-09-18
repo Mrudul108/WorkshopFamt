@@ -71,7 +71,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="col-lg-6 col-md-12">
             <div className="card rounded-4 border-0 p-4 input-form">
-              <h2 className="text-center mb-4 fw-bold text-info">
+              <h2 className="text-center mb-4 fw-bold text-muted">
                 Get in Touch
               </h2>
 
@@ -144,7 +144,7 @@ const Contact = () => {
                 <div className="d-flex gap-3 justify-content-center">
                   <button
                     type="submit"
-                    className="btn btn-info btn-lg fw-semibold shadow-sm w-50"
+                    className="btn btn-muted btn-lg fw-semibold shadow-sm w-50"
                     style={{ transition: "0.3s" }}
                   >
                     Send Message
