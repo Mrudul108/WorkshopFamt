@@ -1,16 +1,24 @@
 import { Link } from "react-router-dom"
+import { useState } from "react";
 
 const About = () => {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <div className="container my-5">
       <div className="row align-items-center justify-content-center">
-        
+
         {/* Image Section */}
-        <div className="col-lg-6 col-md-12 col-sm-12 mb-4 text-center">
-          <img 
-            src="/imgs/about.jpg" 
-            alt="About Empty Minds" 
-            className="img-fluid rounded shadow-sm"
+        <div className="col-lg-6 col-md-12 text-center">
+          {!loaded && (
+            <h2 className="text-center">Loading image... Please wait.</h2>
+          )}
+          <img
+            src="/imgs/about.jpg"
+            alt="About Empty Minds"
+            className='img-fluid rounded shadow-sm'
+            style={{ maxHeight: "400px", objectFit: "cover", display: loaded ? "block" : "none" }}
+            onLoad={() => setLoaded(true)}
           />
         </div>
 
@@ -18,14 +26,14 @@ const About = () => {
         <div className="col-lg-6 col-md-12 col-sm-12 px-3">
           <h1 className="mb-3 fw-bold text-primary">About Us</h1>
           <p>
-            At <span className="fw-semibold">Empty Minds</span>, we see freedom in silence and possibility in stillness. 
-            When thoughts stop colliding, the mind finds space to breathe, to dream, and to create without limits. 
-            An empty mind is not empty at all—it is alive, open, and waiting for sparks of imagination. 
+            At <span className="fw-semibold">Empty Minds</span>, we see freedom in silence and possibility in stillness.
+            When thoughts stop colliding, the mind finds space to breathe, to dream, and to create without limits.
+            An empty mind is not empty at all—it is alive, open, and waiting for sparks of imagination.
             Here, we celebrate the art of letting go of the noise, because only then do the brightest ideas echo the loudest.
           </p>
           <p>
-            This is a space for seekers, builders, and dreamers who believe in turning clarity into strength. 
-            <span className="fw-semibold"> Empty Minds</span> reminds you that the mind, once free, can shape worlds—through engineering, art, 
+            This is a space for seekers, builders, and dreamers who believe in turning clarity into strength.
+            <span className="fw-semibold"> Empty Minds</span> reminds you that the mind, once free, can shape worlds—through engineering, art,
             or everyday choices. Think lighter, live bolder, and carry forward the quiet power of thoughts unchained.
           </p>
 

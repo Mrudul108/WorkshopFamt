@@ -1,19 +1,50 @@
-import React from 'react'
+import { useState } from 'react'
 // import './Slider.css'   // add this css file
 
 function Slider() {
+    const [loaded, setLoaded] = useState(false);
     return (
         <div>
             <div id="carouselExampleControlsNoTouching" className="carousel slide" data-bs-touch="false">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src="/imgs/img4.jpg" className="d-block w-100 slider-img" alt="Slide 1" />
+                        {!loaded && (
+                            <h2 className="text-center">Loading image... Please wait.</h2>
+                        )}
+                        <img
+                            src="/imgs/img4.jpg"
+                            alt="Slide 1"
+                            className="d-block w-100 slider-img"
+                            style={{ maxHeight: "400px", objectFit: "cover", display: loaded ? "block" : "none" }}
+                            onLoad={() => setLoaded(true)}
+                        />
+                        <img />
                     </div>
                     <div className="carousel-item">
-                        <img src="/imgs/img7.jpg" className="d-block w-100 slider-img" alt="Slide 2" />
+                        {!loaded && (
+                            <h2 className="text-center">Loading image... Please wait.</h2>
+                        )}
+                        <img
+                            src="/imgs/img7.jpg"
+                            alt="Slide 2"
+                            className="d-block w-100 slider-img"
+                            style={{ maxHeight: "400px", objectFit: "cover", display: loaded ? "block" : "none" }}
+                            onLoad={() => setLoaded(true)}
+                        />
+                        <img />
                     </div>
                     <div className="carousel-item">
-                        <img src="/imgs/img5.png" className="d-block w-100 slider-img" alt="Slide 3" />
+                        {!loaded && (
+                            <h2 className="text-center">Loading image... Please wait.</h2>
+                        )}
+                        <img
+                            src="/imgs/img5.png"
+                            alt="Slide 3"
+                            className="d-block w-100 slider-img"
+                            style={{ maxHeight: "400px", objectFit: "cover", display: loaded ? "block" : "none" }}
+                            onLoad={() => setLoaded(true)}
+                        />
+                        <img />
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">

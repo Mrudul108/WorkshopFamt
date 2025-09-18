@@ -1,18 +1,24 @@
-import React from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Services = () => {
+  const [loaded, setLoaded] = useState(false);
+
   return (
     <div className='container my-5'>
       <div className="row align-items-center justify-content-center g-4">
-        
+
         {/* Image Section */}
         <div className="col-lg-6 col-md-12 text-center">
-          <img 
-            src="/imgs/services.jpg" 
-            alt="Our Services" 
-            className='img-fluid rounded shadow-sm' 
-            style={{ maxHeight: "400px", objectFit: "cover" }}
+          {!loaded && (
+            <h2 className="text-center">Loading image... Please wait.</h2>
+          )}
+          <img
+            src="/imgs/services.jpg"
+            alt="Our Services"
+            className='img-fluid rounded shadow-sm'
+            style={{ maxHeight: "400px", objectFit: "cover", display: loaded ? "block" : "none" }}
+            onLoad={() => setLoaded(true)}
           />
         </div>
 

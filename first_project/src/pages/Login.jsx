@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 // import { useNavigate } from "react-router-dom"
 
 function Login() {
-  // const navigate = useNavigate()
+  const [loaded, setLoaded] = useState(false);
 
   const [form, setForm] = useState({
     email: "",
@@ -20,7 +20,7 @@ function Login() {
       setErrors({ ...errors, [name]: "" })
     }
   }
-  
+
   const clearForm = () => {
     setForm({ name: "", email: "", mobile: "", message: "" })
     setErrors({});
@@ -55,10 +55,15 @@ function Login() {
         <div className="row align-items-center justify-content-center gap-5 gap-lg-0">
           {/* Left Image (hidden on small screens) */}
           <div className="col-lg-6 text-center d-none d-lg-block">
+            {!loaded && (
+              <h2 className="text-center">Loading image... Please wait.</h2>
+            )}
             <img
               src="/imgs/login.jpg"
               alt="login"
               className="img-fluid rounded-4 shadow"
+              style={{ display: loaded ? "block" : "none" }}
+              onLoad={() => setLoaded(true)}
             />
           </div>
 

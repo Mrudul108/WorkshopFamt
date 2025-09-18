@@ -45,7 +45,7 @@
 
 // Lazy Loading
 function Data() {
-  
+
   return (
     <>
       <h1 className="text-center my-4">Large Data Loaded</h1>

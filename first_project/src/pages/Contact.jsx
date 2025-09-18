@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from "react";
 
 const Contact = () => {
+  const [loaded, setLoaded] = useState(false);
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -54,10 +56,15 @@ const Contact = () => {
         <div className="row align-items-center justify-content-center">
           {/* Left Side Image */}
           <div className="col-lg-6 d-none d-lg-block text-center mb-4 mb-lg-0">
+            {!loaded && (
+              <h2 className="text-center">Loading image... Please wait.</h2>
+            )}
             <img
               src="/imgs/contact.jpg"
               alt="contact"
               className="img-fluid rounded-4 shadow"
+              style={{ display: loaded ? "block" : "none" }}
+              onLoad={() => setLoaded(true)}
             />
           </div>
 
