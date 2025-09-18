@@ -3,95 +3,81 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
   const currentYear = new Date().getFullYear();
+
   return (
-    <div>
-      <footer className="text-center text-lg-start text-white" style={{ backgroundColor: '#3e4551' }}>
-        <div className="container p-4 pb-0">
-          <section>
-            <div className="row">
-              <div className="col-lg-6 col-md-12 mb-4 mb-md-3">
-                <h5 className="text-uppercase">FOOTER CONTENT</h5>
-                <div className="d-flex flex-column align-items-center">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Molestiae modi cum ipsam ad, illo possimus laborum ut
-                    reiciendis obcaecati. Ducimus, quas. Corrupti, pariatur eaque?
-                    Reiciendis assumenda iusto sapiente inventore animi?
-                  </p>
-                </div>
-              </div>
-              <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 className="text-uppercase">Links</h5>
-                  <ul className="list-unstyled mb-0">
-                    <li>
-                      <Link to="/about" className="text-white">About us</Link>
-                    </li>
-                    <li>
-                      <Link to="/services" className="text-white">Services</Link>
-                    </li>
-                    <li>
-                      <Link to="/contact" className="text-white">Contact Us</Link>
-                    </li>
-                    <li>
-                      <Link to="/data" className="text-white">Experience Lazy Loading</Link>
-                    </li>
-                  </ul>
-              </div>
-              <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                <h5 className="text-uppercase">Links</h5>
-                  <ul className="list-unstyled mb-0">
-                    <li>
-                      <a href="#!" className="text-white">Link 1</a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">Link 2</a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">Link 3</a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">Link 4</a>
-                    </li>
-                  </ul>
-              </div >
+    <footer className="text-center text-lg-start text-white" style={{ backgroundColor: '#3e4551' }}>
+      <div className="container p-4 pb-0">
+        
+        {/* Main Content */}
+        <section>
+          <div className="row text-center text-md-start">
+            
+            {/* About Section */}
+            <div className="col-lg-6 col-md-12 mb-4">
+              <h5 className="text-uppercase fw-bold">About Us</h5>
+              <p>
+                The mind is both an artist and an engineer, weaving emotions into 
+                patterns and logic into structures. Art teaches us to dream, 
+                while engineering teaches us to build — together they remind us 
+                that imagination without form is fleeting, and form without 
+                imagination is empty. A strong mindset bridges this gap, giving 
+                courage to dream and discipline to create.
+              </p>
+            </div>
 
-              {/* <div className="col-lg-2 col-md-6 mb-4 mb-md-0">
-                  <h5 className="text-uppercase">Links</h5>
-                  <ul className="list-unstyled mb-0">
-                    <li>
-                      <a href="#!" className="text-white">Link 1</a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">Link 2</a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">Link 3</a>
-                    </li>
-                    <li>
-                      <a href="#!" className="text-white">Link 4</a>
-                    </li>
-                  </ul>
-                </div> */}
+            {/* Quick Links */}
+            <div className="col-lg-3 col-md-6 mb-4">
+              <h5 className="text-uppercase fw-bold">Quick Links</h5>
+              <ul className="list-unstyled">
+                <li>
+                  <Link to="/about" className="text-white text-decoration-none">About Us</Link>
+                </li>
+                <li>
+                  <Link to="/services" className="text-white text-decoration-none">Services</Link>
+                </li>
+                <li>
+                  <Link to="/contact" className="text-white text-decoration-none">Contact Us</Link>
+                </li>
+                <li>
+                  <Link to="/lazypage" className="text-white text-decoration-none">Lazy Loading Page</Link>
+                </li>
+              </ul>
+            </div>
 
-            </div >
-          </section >
-          <hr className="mb-4" />
-          <section className="mb-4 text-center">
-            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i className="fab fa-facebook-f" /></a>
-            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i className="fab fa-twitter" /></a>
-            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i className="fab fa-google" /></a>
-            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i className="fab fa-instagram" /></a>
-            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i className="fab fa-linkedin-in" /></a>
-            <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i className="fab fa-github" /></a>
-          </section>
-        </div >
+            {/* Social Links */}
+            <div className="col-lg-3 col-md-6 mb-4">
+              <h5 className="text-uppercase fw-bold">Follow Us</h5>
+              <div className="d-flex justify-content-center justify-content-md-start gap-2">
+                <a className="btn btn-outline-light btn-floating" href="#!" role="button">
+                  <i className="fab fa-facebook-f" />
+                </a>
+                <a className="btn btn-outline-light btn-floating" href="#!" role="button">
+                  <i className="fab fa-twitter" />
+                </a>
+                <a className="btn btn-outline-light btn-floating" href="#!" role="button">
+                  <i className="fab fa-instagram" />
+                </a>
+                <a className="btn btn-outline-light btn-floating" href="#!" role="button">
+                  <i className="fab fa-linkedin-in" />
+                </a>
+                <a className="btn btn-outline-light btn-floating" href="#!" role="button">
+                  <i className="fab fa-github" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr className="mb-4" />
+
+        {/* Footer Bottom */}
         <div className="text-center p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
           © {currentYear} Copyright:
-          <a className="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+          <span className="fw-bold ms-1">Empty Minds</span>
         </div>
-      </footer >
-
-    </div >
+        <br />
+      </div>
+    </footer>
   )
 }
 

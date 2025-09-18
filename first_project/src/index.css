@@ -29,3 +29,46 @@ input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+/* Default desktop height */
+.slider-img {
+  height: 95vh;
+  object-fit: cover;   /* prevents stretching */
+}
+
+/* Tablet view */
+@media (max-width: 992px) {
+  .slider-img {
+    height: 60vh;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 576px) {
+  .slider-img {
+    height: 40vh;
+  }
+}
+
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+body, html, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  /* background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%); */
+  background-color: wheat;
+  background-attachment: fixed;
+  color: #black;
+}
+
+.container-fluid {
+  background: transparent; /* Keep content background transparent */
+}

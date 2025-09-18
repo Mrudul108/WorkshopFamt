@@ -33,34 +33,34 @@ function App() {
                   </div>
                 </div>
 
-                <div className="container my-2">
+                <div className="container my-1">
                   <div className="row">
                     <div className="col-lg-3 col-md-4 col-sm-6 col-12 my-2 d-flex justify-content-center">
                       <Product
                         imgSrc="/imgs/img.jpeg"
                         title="Quote #1"
-                        text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex inventore rem numquam id fugiat voluptate deleniti eos vel esse quisquam."
+                        text="Your mind is a powerful thing. When you fill it with positive thoughts, your life will start to change."
                       />
                     </div>
                     <div className="col-lg-3 col-md-4 col-sm-6 col-12 my-2 d-flex justify-content-center">
                       <Product
-                        imgSrc="/imgs/img_2.png"
+                        imgSrc="/imgs/img1.webp"
                         title="Quote #2"
-                        text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex inventore rem numquam id fugiat voluptate deleniti eos vel esse quisquam."
+                        text="Difficulties in life don’t come to destroy you, but to help you realize your hidden potential and strength."
                       />
                     </div>
                     <div className="col-lg-3 col-md-4 col-sm-6 col-12 my-2 d-flex justify-content-center">
                       <Product
-                        imgSrc="/imgs/img_3.jpg"
+                        imgSrc="/imgs/img2.jpg"
                         title="Quote #3"
-                        text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex inventore rem numquam id fugiat voluptate deleniti eos vel esse quisquam."
+                        text="“The greatest weapon against stress is our ability to choose one thought over another.” — William James"
                       />
                     </div>
                     <div className="col-lg-3 col-md-4 col-sm-6 col-12 my-2 d-flex justify-content-center">
                       <Product
-                        imgSrc="/imgs/img_4.png"
+                        imgSrc="/imgs/img3.png"
                         title="Quote #4"
-                        text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex inventore rem numquam id fugiat voluptate deleniti eos vel esse quisquam."
+                        text="“Tough times never last, but tough people do.” — Robert H. Schuller"
                       />
                     </div>
                   </div>
@@ -75,7 +75,7 @@ function App() {
             <Route path='/contact' element={<Contact />}></Route>
             <Route path='/login' element={<Login />}></Route>
             <Route path='/register' element={<Register />}></Route>
-            <Route path='/data' element={<LazyPage />}></Route> {/* route for loading LazyPage */}
+            <Route path='/lazypage' element={<LazyPage />}></Route> {/* route for loading LazyPage */}
             <Route path='*' element={<PageNotFound />}></Route>
           </Routes>
 

@@ -1,4 +1,5 @@
 import React from 'react'
+// import './Slider.css'   // add this css file
 
 function Slider() {
     return (
@@ -6,10 +7,13 @@ function Slider() {
             <div id="carouselExampleControlsNoTouching" className="carousel slide" data-bs-touch="false">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img src="/imgs/iron-man.jpg" className="d-block w-100" alt="..." />
+                        <img src="/imgs/img4.jpg" className="d-block w-100 slider-img" alt="Slide 1" />
                     </div>
                     <div className="carousel-item">
-                        <img src="/imgs/iron-man-2.jpg" className="d-block w-100" alt="..." />
+                        <img src="/imgs/img7.jpg" className="d-block w-100 slider-img" alt="Slide 2" />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="/imgs/img5.png" className="d-block w-100 slider-img" alt="Slide 3" />
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">

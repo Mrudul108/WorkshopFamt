@@ -14,7 +14,7 @@ function Header() {
         <div>
             <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Empty Minds</a>
+                    <span className="navbar-brand ms-3" href="#">Empty Minds</span>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon" />
                     </button>
@@ -34,8 +34,8 @@ function Header() {
                             </li>
                         </ul>
                         <form className="d-flex flex-lg-row flex-column gap-2" role="search">
-                            <button className="btn btn-outline-primary" onClick={handleLoginNav} >Login</button>
-                            <button className="btn btn-outline-success" onClick={handleRegisterNav} >Register</button>
+                            <button className="btn btn-primary" onClick={handleLoginNav} >Login</button>
+                            <button className="btn btn-success" onClick={handleRegisterNav} >Register</button>
                         </form>
                     </div>
                 </div>
